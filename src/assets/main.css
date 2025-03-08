@@ -1,0 +1,216 @@
+:root {
+  --primary-color: #2ecc71;
+  --primary-dark: #27ae60;
+  --primary-light: #a9dfbf;
+  --accent-color: #16a085;
+  --text-color: #333;
+  --text-light: #666;
+  --background-color: #f5f5f5;
+  --border-color: #e0e0e0;
+  --input-background: #fff;
+  --input-border: #ccc;
+  --input-focus-border: #2ecc71;
+  --input-placeholder: #aaa;
+  --button-background: #2ecc71;
+  --button-hover-background: #27ae60;
+  --button-text-color: #fff;
+}
+
+body {
+  font-family: 'Vazirmatn', Arial, sans-serif;
+  direction: rtl;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove problematic width constraints */
+#app {
+  width: 100%;
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.3s;
+  padding: 3px;
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+.green {
+  color: var(--primary-color);
+}
+
+.green-bg {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.green-light-bg {
+  background-color: var(--primary-light);
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+button.primary {
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+}
+
+button.primary:hover {
+  background-color: var(--button-hover-background);
+}
+
+button.secondary {
+  background-color: #95a5a6;
+  color: var(--button-text-color);
+}
+
+button.secondary:hover {
+  background-color: darken(#95a5a6, 10%);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  background-color: var(--input-background);
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--input-placeholder);
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--input-focus-border);
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(46, 204, 113, 0.25);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group .required {
+  color: #e74c3c;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  display: block;
+}
+
+.alert {
+  padding: 15px;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.alert-success {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.alert-error {
+  background-color: #e74c3c;
+  color: white;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: rgba(46, 204, 113, 0.1);
+  }
+}
+
+/* Remove problematic layout styles for desktop */
+@media (min-width: 1024px) {
+  body {
+    width: 100%;
+  }
+
+  #app {
+    width: 100%;
+  }
+}
+
+/* Green Theme Button Styles */
+.btn-green {
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-green:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.btn-green-outline {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-green-outline:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Green Form Elements */
+.input-green:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(46, 204, 113, 0.25);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+}
